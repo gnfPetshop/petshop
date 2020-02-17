@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "http://mybatis.org/dtd/mybatis-3-mapper.dtd" "mybatis-3-mapper.dtd" >
+<mapper namespace="com.kgc.exam.mapper.UsersMapper">
+
+    <select id="queryUsers" resultType="com.kgc.exam.entity.Users">
+        select id,account,password,username,sex,tel,email,address
+        from users
+    </select>
+
+    <update id="updateUsers">
+        update users
+        <set>
+            account=#{users.account},username=#{users.username},sex=#{users.sex},tel=#{users.tel},email=#{users.email},address=#{users.address}
+        </set>
+        <where>
+            id=#{users.id}
+        </where>
+    </update>
+    <select id="queryById" resultType="com.kgc.exam.entity.Users">
+        select id,account,password,username,sex,tel,email,address
+        from users
+        <where>
+            id=#{id}
+        </where>
+    </select>
+    <update id="updatePwd">
+        update users
+        <set>
+            password = #{pwd}
+        </set>
+        <where>
+            id=1
+        </where>
+    </update>
+</mapper>

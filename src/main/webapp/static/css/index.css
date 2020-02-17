@@ -1,0 +1,635 @@
+*{margin:0;padding:0;}
+/*头部背景图片*/
+.bg_picture{
+    /*width:100%;*/
+    background:transparent;
+    height:950px;
+    animation:bg_turn 10s ease-in-out infinite;
+}
+
+/*大屏模式下的一些样式*/
+@media screen and (min-width:992px) {
+    /*大屏幕时，动画关键帧切换背景图片*/
+    @keyframes bg_turn {
+        0% {
+            background: url(../../img/index/bg01.jpg) no-repeat;
+            background-size:cover;background-position: center;
+        }
+        50% {
+            background: url(../../img/index/bg02.jpg) no-repeat;
+            background-size:cover;background-position: center
+        }
+        100% {
+            background: url(../../img/index/bg01.jpg) no-repeat;
+            background-size:cover;background-position: center
+        }
+    }
+    /*logo内边距*/
+    div.logobar {
+        padding-top: 40px;
+        padding-bottom: 25px;
+    }
+
+    /*logo图片大屏时的大小*/
+    div.logobar a img {
+        width: 13em;
+    }
+
+    /*调导航的位置*/
+    .main1 .nav {
+        height: 65px;
+        /*min-width:1000px;*/
+        width: 63%;
+        background: #ff9003;
+        border-radius: 70px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    /*导航布局*/
+    .main1 .nav ul {
+        width: 100%;
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0 2rem;
+        justify-content: space-around;
+        box-sizing: border-box;
+    }
+
+    /*首页底色样式设为黑色*/
+    .main1 .nav ul li:first-child {
+        background: #000;
+    }
+    /*导航布局*/
+    .main1 .nav ul li {
+        width: 15%;
+        text-align: center;
+        line-height: 65px;
+        /*border:1px solid #000;*/
+    }
+
+    /*导航中文字的样式*/
+    .main1 .nav ul li a {
+        text-decoration: none;
+        font-size: 15px;
+        color: #fff;
+    }
+
+    /*鼠标悬停时的样式*/
+    .main1 .nav ul li:hover {
+        background: #000;
+    }
+
+    /*侧边栏位置*/
+    .aside {
+        position: absolute;
+        top: 30%;
+        right: 20%;
+        background: rgba(255, 255, 255, 0.9);
+    }
+
+    /*侧边栏留白*/
+    .aside ul {
+        padding: 0 2rem;
+    }
+
+    /*侧边栏布局*/
+    .aside ul li {
+        border-bottom: 1px solid #e5e5e5;
+        padding: 25px 5px;
+    }
+
+    /*图片位置微调*/
+    .aside ul li img {
+        padding-top: 5px;
+    }
+
+    /*文字位置微调*/
+    .aside ul li div {
+        padding-left: 15px;
+    }
+
+    /*侧边栏文字布局*/
+    .aside ul li p {
+        margin-bottom: 0;
+    }
+
+    /*侧边栏文字样式*/
+    .aside ul li p:first-child a {
+        font-size: 14px;
+        color: #000;
+        font-weight: bold;
+    }
+
+    /*侧边栏文字样式*/
+    .aside ul li p:last-child a {
+        font-size: 13px;
+        color: #888;
+        display: inline-block;
+        margin-right: 10px;
+    }
+    /*宠物用品商城介绍*/
+    .main2 {
+        width: 100%;
+        height: 550px;
+        background: url(../../img/index/module_01.png) no-repeat;
+        background-position: left bottom;
+        position: relative;
+    }
+
+    /*宠物商城模块样式*/
+    .main2 > div {
+        width: 500px;
+        background: #ff9003;
+        position: absolute;
+        right: 20%;
+        top: 25%;
+        box-shadow: 5px 5px 20px #ff8c3f;
+    }
+
+    /*宠物商城模块文字颜色*/
+    .main2 > div > p,
+    .main3 > div > p {
+        color: #fff;
+    }
+
+    /*宠物商城模块内容样式*/
+    .main2 > div > p:first-child,
+    .main3 > div > p:first-child {
+        font-size: 24px;
+        margin: 50px 40px 20px;
+    }
+
+    /*宠物商城模块内容样式*/
+    .main2 > div > p:last-child,
+    .main3 > div > p:last-child {
+        font-size: 12px;
+        line-height: 200%;
+        padding: 0 40px 50px;
+    }
+
+    /*品牌视频介绍模块*/
+    .main3 {
+        width: 100%;
+        height: 570px;
+        background: url(../../img/index/fengexian.png) no-repeat;
+        background-position: 100% 100%;
+        position: relative;
+    }
+
+    /*品牌视频介绍文字模块位置*/
+    .main3 > div:first-child {
+        width: 400px;
+        height: 356px;
+        background: #ff9003;
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        box-shadow: 5px 5px 20px #ff8c3f;
+    }
+
+    /*品牌视频位置*/
+    .main3 > div:last-child {
+        position: absolute;
+        right: 20%;
+        top: 18%;
+
+    }
+}
+/*宠物专区模块*/
+.main4{
+    width:70%;
+}
+.main4>.product>div{
+    width:20%;
+}
+/*标题离下边模块的距离*/
+.dog_module, .cat_module {
+    margin-top: 120px;
+    margin-bottom: 20px;
+}
+
+/*狗狗专区和猫咪侧边线条样式*/
+.dog_module > div > div.line,
+.cat_module > div > div.line,
+.brand_intr>div:not(:nth-child(2)) div.line{
+    width: 90%;
+    margin-top: 55px;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+/*线条位置微调*/
+.dog_module > div:first-child > div.line,
+.cat_module > div:first-child > div.line,
+.brand_intr>div:not(:nth-child(2)) .line{
+   margin-left:10%;
+}
+.dog_module > div:last-child>div.line,
+.cat_module > div:last-child>div.line{
+    margin-left:-10%;
+}
+
+    /*狗狗专区 背景图片*/
+ .dog_module > div:nth-child(2) {
+    background: url(../../img/index/D.png) no-repeat;
+     background-position: center;
+}
+
+/*猫咪专区 背景图片*/
+.cat_module > div:nth-child(2) {
+    background: url(../../img/index/C.png) no-repeat;
+    background-position: center;
+}
+
+/*狗狗专区/猫咪专区字体样式*/
+.dog_module > div:nth-child(2) p,
+.cat_module > div:nth-child(2) p {
+    margin-bottom: 0;
+    font-size: 26px;
+    color: #333;
+    text-align: center;
+    opacity: 0.9;
+}
+
+/*狗狗专区字体样式*/
+.main4 .dog_module > div:nth-child(2) p:last-child,
+.cat_module > div:nth-child(2) p:last-child,
+.wrap p {
+    color: #bababa;
+}
+/*文字距离上下的外边距*/
+.product_title{
+    margin:15px 0;
+}
+/*文字居中，上下距离调整*/
+.product_title p, .wrap p {
+    text-align: center;
+}
+
+/*去除p的下外边距*/
+.product_title  p, .wrap p {
+    margin-bottom: 0;
+}
+
+/*产品标题样式*/
+.product_title p a, .wrap p a{
+    display: block;
+    font-size: 14px;
+    color:#999;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/*价格样式*/
+.product_title p:last-child, .wrap p:last-child {
+    font-size: 20px;
+    color: #ff9003;
+
+}
+
+/*鼠标悬停到产品标题时的样式*/
+.product_title p a:hover,
+.wrap p a:hover {
+    text-decoration: none;
+    color: #666;
+}
+
+/*猜你喜欢模块*/
+.may_like {
+    width: 100%;
+    margin: 100px 0 20px;
+    text-align: center;
+}
+
+/*猜你喜欢字体样式*/
+.may_like span {
+    display: inline-block;
+    font-size: 24px;
+    color: rgb(51, 51, 51);
+    font-weight: 700;
+    margin: 0 10px;
+    opacity: 0.9;
+}
+
+/*图片滚动*/
+.wrap {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    margin: 50px 0;
+}
+
+/*图片不换行，无限匀速移动 */
+.wrap ul {
+    white-space: nowrap;
+    animation: move 50s infinite 1s linear;
+}
+
+/*行内块显示*/
+.wrap ul li {
+    display: inline-block;
+    list-style: none;
+    width: 190px;
+    margin-left: 5px;
+}
+
+/*文字样式...*/
+.wrap ul li p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/*文字样式*/
+.wrap ul li p:last-child {
+    margin-top: 0;
+}
+
+/*动画关键帧*/
+@keyframes move {
+    0% {
+        margin-left: 0;
+    }
+    100% {
+        margin-left: -101%
+    }
+}
+/*鼠标悬停时，动画暂停播放*/
+.wrap:hover ul {
+    -webkit-animation-play-state: paused; /*动画暂停播放*/
+}
+/*footer底层宽高*/
+/*中大屏幕*/
+@media screen and (min-width:789px){
+    .my_footer{
+        width:100%;
+        height:320px;
+    }
+}
+/*小屏*/
+@media screen and (max-width:788px){
+    .my_footer{
+        width:100%;
+        height:32px;
+    }
+}
+
+/*侧边栏位置*/
+.my_aside{
+    position:fixed;
+    right:0;
+    top:43%;
+    z-index:2;
+}
+
+/*ul去掉列表符号*/
+.my_aside ul{
+    list-style: none;
+}
+/*每个li的宽高*/
+.my_aside ul li{
+    width:54px;
+    height:54px;
+    overflow:hidden;
+    background:#ff9003;
+}
+/*图片位置调整*/
+.my_aside ul li img{
+    margin:13px 0 0 12px;
+}
+/*鼠标悬停时的样式*/
+.my_aside ul li:hover{
+    background:#000;
+}
+/*第一个图片的背景图片*/
+.my_aside ul li:first-child{
+    background:#000;
+}
+/*第一个图片的鼠标悬停时背景图片*/
+.my_aside ul li:first-child:hover{
+    background:#ff9003;
+}
+
+/*中小屏模式下的一些样式*/
+@media screen and (max-width:991px){
+    /*导航横线排列*/
+    .main1_sd{
+        width:100%;
+        height:60px;
+        background:white;
+        display:flex !important;
+        z-index: 2;
+        position:fixed;
+    }
+    /*排列方式*/
+    .main1_sd div{
+        /*height: 60px;*/
+        text-align: center;
+        line-height:60px;
+    }
+    /*下拉导航占宽度面积*/
+    .main1_sd div:first-child{
+         width:10%;
+    }
+    /*logo占宽度面积*/
+    .main1_sd div:nth-child(2){
+         width:80%;
+    }
+    /*logo图片大小*/
+    .main1_sd div:nth-child(2) img{
+        max-width:100px;
+    }
+    /*购物车占宽度面积*/
+    .main1_sd div:last-child{
+        width:10%;
+    }
+    /*购物车图片大小*/
+    .main1_sd div:last-child img{
+        width:25px;
+    }
+    /*main1_sd下拉导航模块大小、位置*/
+    #content{
+        position:absolute;
+        height:100%;
+        width:260px;
+        z-index: 2;
+        background:#ff9003;
+    }
+    /*导航内容 每个小模块的高度*/
+    #content div ul li{
+        height:40px;
+        line-height:40px;
+    }
+    /*字体颜色*/
+    #content div ul li a{
+        color:#fff;
+    }
+    /*鼠标悬停时去掉下划线*/
+    #content div ul li a:hover{
+        text-decoration:none ;
+    }
+    /*登录注册模块*/
+    #content div ul li:first-child{
+        height:54px;
+        text-align:center;
+        margin-bottom:10px;
+    }
+    /*登录注册模块样式*/
+    #content div ul li:first-child a{
+        display: inline-block;
+        height:54px;
+        width:50%;
+        line-height:54px;
+    }
+    /*导航内容模块样式*/
+    #content div ul li:not(:first-child){
+        padding-left:20px;
+        transition:padding-left 800ms ease;
+    }
+    /*登录注册模块鼠标悬停时的样式*/
+    #content div ul li:first-child a:hover{
+        background:#eee;
+        color:#ff9003;
+        opacity:0.9;
+    }
+    /*其他模块鼠标悬停时的样式*/
+    #content div ul li:not(:first-child):hover{
+        background:#fff;
+        padding-left:25px;
+    }
+    /*字体颜色*/
+ #content div ul li:not(:first-child):hover a{
+     color:#ff9003;
+  }
+    /*轮播图*/
+    .main1_sd_carousel.bg_picture{
+        height:240px;
+         padding-top:60px;
+        margin-bottom:60px;
+    }
+    /*图片大小*/
+    .bg_picture{
+        width:100%;
+        height:180px;
+    }
+    /*动画轮播*/
+    @keyframes bg_turn {
+        0% {
+            background: url(../../img/index/p1_3D.jpg) no-repeat;
+            background-size:100%;
+            background-position:50% 40%;
+        }
+        50% {
+            background: url(../../img/index/p_3D.jpg) no-repeat;
+            background-size:100%;
+            background-position:50% 40%;
+        }
+        100% {
+            background: url(../../img/index/p1_3D.jpg) no-repeat;
+            background-size:100%;
+            background-position:50% 40%;
+        }
+    }
+    /*中小屏幕品牌介绍模块背景图片*/
+    .main3_sm {
+        width: 100%;
+        /*height: 600px;*/
+        background: url(../../img/index/fengexian.png) no-repeat;
+        background-position: 100% 100%;
+        position: relative;
+    }
+    /*中小屏幕品牌介绍模块标题横线排列*/
+    .brand_intr{
+        width: 100%;
+        display: flex !important;
+        margin-bottom:25px;
+    }
+    /*中间文字占地面积*/
+    .brand_intr>div:not(:nth-child(2)){
+            width:30%;
+    }
+
+    /*中间文字占地面积*/
+    .brand_intr>div:nth-child(2){
+        width:40%;
+        text-align: center;
+        margin-top:1%;
+    }
+    /*去除p的下外边距*/
+    .brand_intr>div:nth-child(2) p{
+          margin-bottom: 0;
+    }
+    /*第一行文字“品牌视频介绍”样式*/
+    .brand_intr>div:nth-child(2) p:first-child{
+        font-size:28px;
+        opacity: 0.8;
+    }
+    /*第一行文字“VIDEO”样式*/
+    .brand_intr>div:nth-child(2) p:last-child{
+        font-size:1.2em;
+        color:#bababa;
+    }
+    /*小屏幕时字体微调*/
+    @media screen and (max-width: 768px)
+    {
+        /*第一行文字“品牌视频介绍”样式*/
+        .brand_intr>div:nth-child(2) p:first-child{
+            font-size:1.2em;
+            opacity: 0.8;
+        }
+        /*第一行文字“VIDEO”样式*/
+        .brand_intr>div:nth-child(2) p:last-child{
+            font-size:1em;
+            color:#bababa;
+        }
+    }
+    /*横线*/
+  .brand_intr>div:not(:nth-child(2)) div.line,
+  .main4_sm>div:not(:nth-child(2)) div.line {
+        width: 50%;
+    }
+    /*左侧横线微调*/
+    .brand_intr>div:first-child div.line{
+        margin-left:84%;
+    }
+    /*右侧横线微调*/
+    .brand_intr>div:last-child div.line{
+        margin-left: -34%;
+    }
+    /*视频图片的位置*/
+    .main3_sm>div:last-child{
+          width:60%;
+          margin-left:15%;
+          margin-bottom:2%;
+          padding-bottom:3%;
+    }
+    /*宠物专区去除背景*/
+    .main4_sm .pet_module > div:nth-child(2){
+        background: none;
+    }
+    /*字体颜色*/
+    .main4_sm p a{
+        color:#999;
+        font-size:14px;
+    }
+    /*价格样式*/
+    .main4_sm p:last-child{
+        font-size:22px;
+        color:#ff9003;
+    }
+    /*鼠标悬停时字体样式*/
+    .main4_sm p a:hover{
+        text-decoration: none;
+        color:#333;
+    }
+
+
+
+
+
+
+
+}
+

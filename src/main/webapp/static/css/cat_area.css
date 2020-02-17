@@ -1,0 +1,200 @@
+/*狗狗专区底色样式设为黑色*/
+.main1 .nav ul li:nth-child(3) {
+    background: #000;
+}
+@media screen and (min-width: 992px) {
+    /*狗狗专区内容区域的宽度*/
+    .dog_area{
+        width:62%;
+        min-width:1000px;
+    }
+}
+@media screen and (max-width: 991px) {
+    /*狗狗专区内容区域的宽度*/
+    .dog_area{
+        width:80%;
+
+    }
+}
+
+/*狗狗专区背景样式*/
+.main_left .style1{
+    width:85%;
+    height:50px;
+    line-height:50px;
+    background:#000;
+    border-radius:25px;
+}
+/*相关推荐背景颜色*/
+.main_left>div:nth-child(2) .style1{
+    background:#ff9003;
+    margin-top:40px;
+}
+/*狗狗专区图片大小*/
+.main_left .style1 img{
+    width:16px;
+    margin-left:20px;
+    margin-bottom:10px;
+}
+/*狗狗专区文字样式*/
+.main_left .style1 span{
+    color:#fff;
+    font-size:15px;
+    font-weight:bold;
+    margin-left:15px;
+}
+/*狗狗主粮、狗狗日用距离左侧外边距*/
+.main_left>div:first-child>ul{
+    margin-left:20px;
+}
+/*宽度*/
+.main_left>div:first-child>ul>li{
+    width:75%;
+    height:40px;
+    line-height:40px;
+}
+/*文字样式*/
+.main_left>div:first-child>ul>li a{
+    font-size:13px;
+    color:#666;
+    margin-left:10px;
+}
+/*文字样式*/
+.main_left>div:first-child>ul>li a:hover{
+    text-decoration:none;
+    color:#ff9003;
+}
+/*中间下划线*/
+.main_left>div>ul>li:first-child{
+    border-bottom:1px solid #eee;
+}
+/*右侧产品描述*/
+.pro_intr .details{
+    width:80%;
+    padding-right:50px;
+}
+/*产品描述文字样式*/
+.pro_intr .details>a{
+    display: block;
+    font-size:12px;
+    color:#999;
+}
+/*鼠标悬停时的文字样式*/
+.pro_intr .details>a:hover{
+    text-decoration: none;
+    color:#333;
+}
+/*价格样式*/
+.pro_intr .details>div{
+    font-size:22px;
+    color:#ff9003;
+    margin-bottom:5px;
+}
+/*立即购买样式*/
+.pro_intr .details>button{
+    font-size: 12px;
+    font-weight: bold;
+    color: #333333;
+    border-color: transparent;
+    background-color: transparent;
+    padding-left: 1px;
+    padding-right: 1px;
+}
+/*立即购买，鼠标悬停时的样式*/
+.pro_intr .details>button:hover{
+    color:#999;
+}
+.main_right_sd{
+    z-index:-5;
+}
+
+/*小屏时顶部手风琴下拉菜单样式*/
+#menu{
+    width:85%;
+    /*min-width:300px;*/
+    margin: 0 auto 50px;
+    height:50px;
+    padding-top:90px;
+}
+/*下拉选项的样式*/
+#menu ul li{
+    background:#ff9003;
+    height:40px;
+    line-height:40px;
+    color:#fff;
+    font-size:14px;
+    z-index: 1;
+}
+/*猫咪主粮和猫咪日用的字体样式*/
+#menu ul li a{
+    display:block;
+    width:100%;
+    color:#fff;
+    font-size:14px;
+}
+/*鼠标悬停时的样式*/
+#menu ul li a:hover{
+    color:#ff9003;
+    text-decoration:none;
+
+}
+/*初始状态*/
+#menu ul li:not(:first-child){
+    display:none;
+}
+/*鼠标悬停时背景颜色*/
+#menu ul li:not(:first-child):hover{
+    background:#fff;
+}
+/*分页条宽度*/
+.my_page{
+    width:100%;
+}
+/*位置调整到右侧*/
+.pagination{
+    justify-content: flex-end !important;
+}
+.pagination li:first-child,
+.pagination li:last-child{
+    padding:1px 5px;
+}
+.pagination li:nth-child(2),
+.pagination li:nth-child(3){
+  padding:0 7px;
+}
+.pagination li{
+    background:#ff9003;
+    margin-left:5px;
+}
+.pagination li:hover{
+    opacity:0.7;
+}
+.pagination li{
+    border:1px solid transparent;
+}
+.pagination li a{
+    color:#fff;
+}
+.pagination li a:hover{
+    text-decoration:none;
+}
+.pagination li:first-child{
+    display:none;
+}
+.checkbox{
+    background:transparent !important;
+    border-color:#ff9003 !important;
+}
+.pagination .active{
+    color:#000 !important;
+}
+
+
+
+
+
+
+
+
+
+

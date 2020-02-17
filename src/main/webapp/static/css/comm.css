@@ -1,0 +1,93 @@
+*{
+ margin:0;  padding:0;
+}
+/*footer底层宽高*/
+/*中大屏幕*/
+@media screen and (min-width:789px){
+    .my_footer{
+        width:100%;
+        height:320px;
+    }
+}
+/*小屏*/
+@media screen and (max-width:788px){
+    .my_footer{
+        width:100%;
+        height:32px;
+    }
+}
+
+/*侧边栏位置*/
+.my_aside{
+    position:fixed;
+    right:0;
+    top:43%;
+    z-index:2;
+}
+
+/*ul去掉列表符号*/
+.my_aside ul{
+    list-style: none;
+}
+/*每个li的宽高*/
+.my_aside ul li{
+    width:54px;
+    height:54px;
+    overflow:hidden;
+    background:#ff9003;
+}
+/*图片位置调整*/
+.my_aside ul li img{
+    margin:13px 0 0 12px;
+}
+/*鼠标悬停时的样式*/
+.my_aside ul li:hover{
+    background:#000;
+}
+/*第一个图片的背景图片*/
+.my_aside ul li:first-child{
+    background:#000;
+}
+/*第一个图片的鼠标悬停时背景图片*/
+.my_aside ul li:first-child:hover{
+    background:#ff9003;
+}
+/*文字距离上下的外边距*/
+.product_title{
+    margin:15px 0;
+}
+/*文字居中，上下距离调整*/
+.product_title p, .wrap p {
+    text-align: center;
+}
+
+/*去除p的下外边距*/
+.product_title  p, .wrap p {
+    margin-bottom: 0;
+}
+
+/*产品标题样式*/
+.product_title p a, .wrap p a{
+    display: block;
+    font-size: 14px;
+    color:#999;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/*价格样式*/
+.product_title p:last-child, .wrap p:last-child {
+    font-size: 20px;
+    color: #ff9003;
+
+}
+
+/*鼠标悬停到产品标题时的样式*/
+.product_title p a:hover,
+.wrap p a:hover {
+    text-decoration: none;
+    color: #666;
+}
+
+

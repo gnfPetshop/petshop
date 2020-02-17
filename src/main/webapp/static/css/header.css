@@ -1,0 +1,218 @@
+*{margin:0px;padding:0px;}
+
+/*大屏模式下的一些样式*/
+@media screen and (min-width:992px){
+    /*logo内边距*/
+    div.logobar{
+        padding-top:40px;
+        padding-bottom:25px;
+    }
+    /*logo图片大屏时的大小*/
+    div.logobar a img{
+        width:13em;
+    }
+    /*调导航的位置*/
+   .main1 .nav{
+       height:65px;
+       width:62%;
+       /*min-width:1000px;*/
+       background:#ff9003;
+       border-radius:70px;
+       margin:0 auto;
+       text-align: center;
+   }
+    /*导航布局*/
+    .main1 .nav ul{
+        width:100%;
+        display:flex;
+        list-style: none;
+        margin:0;
+        padding:0 2rem;
+        justify-content: space-around;
+        box-sizing: border-box;
+
+    }
+    /*导航布局*/
+    .main1 .nav ul li{
+        width:15%;
+        text-align: center;
+        line-height:65px;
+        /*border:1px solid #000;*/
+    }
+    /*导航中文字的样式*/
+    .main1 .nav ul li a{
+        text-decoration: none;
+        font-size:15px;
+        color:#fff;
+    }
+    /*鼠标悬停时的样式*/
+    .main1 .nav ul li:hover{
+         background:#000;
+    }
+}
+/*中小屏模式下的一些样式*/
+@media screen and (max-width:991px){
+    /*logo内边距*/
+    div.logobar{
+        padding:15px 0;
+    }
+    /*logo图片的大小*/
+    div.logobar a img{
+        max-width:100px;
+    }
+    /*导航栏样式*/
+}
+/*中小屏模式下的一些样式*/
+@media screen and (max-width:991px) {
+    /*导航横线排列*/
+    .main1_sd {
+        width: 100%;
+        height: 60px;
+        background: white;
+        display: flex !important;
+        z-index: 2;
+        position: fixed;
+    }
+
+    /*排列方式*/
+    .main1_sd div {
+        text-align: center;
+        line-height: 60px;
+    }
+
+    /*下拉导航占宽度面积*/
+    .main1_sd div:first-child {
+        width: 10%;
+    }
+
+    /*logo占宽度面积*/
+    .main1_sd div:nth-child(2) {
+        width: 80%;
+    }
+
+    /*logo图片大小*/
+    .main1_sd div:nth-child(2) img {
+        max-width: 100px;
+    }
+
+    /*购物车占宽度面积*/
+    .main1_sd div:last-child {
+        width: 10%;
+    }
+
+    /*购物车图片大小*/
+    .main1_sd div:last-child img {
+        width: 25px;
+    }
+
+    /*main1_sd下拉导航模块大小、位置*/
+    #content{
+        position:absolute;
+        height:100%;
+        width:260px;
+        z-index: 2;
+        background:#ff9003;
+    }
+    /*导航内容 每个小模块的高度*/
+    #content div ul li{
+        height:40px;
+        line-height:40px;
+    }
+    /*字体颜色*/
+    #content div ul li a{
+        color:#fff;
+    }
+    /*鼠标悬停时去掉下划线*/
+    #content div ul li a:hover{
+        text-decoration:none ;
+    }
+    /*登录注册模块*/
+    #content div ul li:first-child{
+        height:54px;
+        text-align:center;
+        margin-bottom:10px;
+    }
+    /*登录注册模块样式*/
+    #content div ul li:first-child a{
+        display: inline-block;
+        height:54px;
+        width:50%;
+        line-height:54px;
+    }
+    /*导航内容模块样式*/
+    #content div ul li:not(:first-child){
+        padding-left:20px;
+        transition:padding-left 800ms ease;
+    }
+    /*登录注册模块鼠标悬停时的样式*/
+    #content div ul li:first-child a:hover{
+        background:#eee;
+        color:#ff9003;
+        opacity:0.9;
+    }
+    /*其他模块鼠标悬停时的样式*/
+    #content div ul li:not(:first-child):hover{
+        background:#fff;
+        padding-left:25px;
+    }
+    /*字体颜色*/
+    #content div ul li:not(:first-child):hover a{
+        color:#ff9003;
+    }
+}
+
+.container-fluid{
+    width:100%;
+}
+
+/*大屏时顶部背景颜色*/
+.bg_color{
+    background:#eee;
+    height:170px;
+    float:left;
+    opacity: 0.9    ;
+    position:absolute;
+    z-index:-1;
+
+}
+/*横线排列，两端对齐*/
+.top_bar>div{
+     width:62%;
+     height:40px;
+     display:flex !important;
+     justify-content: space-between;
+     align-items: center;
+     opacity:0.7;
+}
+/*字体大小*/
+.top_bar>div span{
+    font-size:12px;
+}
+/*调整登录、注册、购物车的距离*/
+.top_bar>div>div>a{
+    margin-left:5px;
+    animation:opacity 3s ease;
+}
+/*鼠标悬停时的样式*/
+.top_bar>div>div>a:hover{
+    text-decoration: none;
+    color:#000;
+}
+/*注册登录图片大小位置*/
+.top_bar>div>div>a img{
+    width:13px;
+    margin:0 3px;
+}
+/*购物图片大小*/
+.top_bar>div>div>a:last-child img{
+    width:20px;
+}
+/*登录、注册字体样式*/
+.top_bar>div>div>a{
+    font-size:12px;
+    color:#333;
+}
+/*重新调整logo的上内边距位置*/
+div.logobar{
+    padding-top: 5px !important;
+}

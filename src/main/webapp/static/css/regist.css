@@ -1,0 +1,139 @@
+ul,li,p,label{
+    margin:0;
+    padding:0;
+}
+/*中间主模块位置*/
+.main_module{
+    width: 80%;
+    font-size:14px;
+    margin:0 auto;
+    display:flex !important;
+   justify-content: space-around;
+    padding:5%;
+}
+
+/*注册模块*/
+.right_login{
+    max-width:430px;
+    min-width:430px;
+    background:#f7f7f7;
+    box-shadow: 0 0 20px #ddd;
+    border-radius: 5px;
+    box-sizing:border-box;
+	position:relative;
+}
+/*去除lable和p的样式*/
+.right_login p{
+    color:#666;
+    font-size:12px;
+}
+/*右侧登录模块 边框到内容的距离*/
+.right_login>div{
+    padding:50px;
+}
+/*每个li的间距*/
+.right_login ul li{
+    height:55px;
+}
+/*用户名和密码样式*/
+.uname,.upwd,.rewd,.phone,.input_code,code{
+    width:100%;
+    padding:5px 8px;
+    border-radius:3px;
+    outline: none;
+    border:1px solid #ddd;
+    background:transparent;
+}
+.right_login ul li:nth-child(3){
+    overflow: hidden;
+    position: relative;
+}
+/*获取按钮的样式*/
+.code{
+    border:none;
+    color:#fff;
+    background:#ff9003;
+    width:20%;
+    height:33px;
+    margin-left:80%;
+    border-top-right-radius:3px;
+    border-bottom-right-radius:3px;
+}
+.code:focus{
+    outline:none;
+}
+/*验证码输入框长度*/
+.input_code{
+    position:absolute;
+    width:80%;
+    border-right:none;
+    border-top-right-radius:0;
+}
+/*当光标点击到input中的边框样式*/
+.uname:focus,.upwd:focus,.rewd:focus,.phone:focus,.input_code:focus{
+    border:1px solid #999;
+}
+.input_code:focus{
+  border-right:none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/*线条样式*/
+.right_login ul li:nth-child(6){
+    height:20px;
+    border-top:1px solid #ddd;
+}
+/*登录、注册按钮样式*/
+.right_login ul li button{
+    height:35px;
+    border:none ;
+    color:#fff;
+    background:#ff9003;
+    cursor:pointer;
+    outline:none;
+    border-radius:3px;
+}
+/*登录按钮样式*/
+.right_login ul li:nth-child(8) button{
+    color:#ff9003;
+    background:#fff;
+    border:1px solid #ff9003;
+}
+
+/*底层文字的下外边距*/
+.right_login>div>div:last-child p{
+    margin-bottom:8px;
+}
+/*第一行文字的样式*/
+.right_login>div>div:last-child p:first-child{
+    font-size:14px;
+    color:#000;
+}
+/*第二行文字的样式*/
+.right_login>div>div:last-child p:nth-child(2) span{
+    color:#000;
+}
+/*第三行文字的样式*/
+.right_login>div>div:last-child p:nth-child(3) span{
+    color:#E25041;
+}
+ #uname_msg,#phone_msg,#upwd_msg,#rewd_msg{
+	    position:absolute;
+			width:300px;
+			height:23px;
+			color:#666;
+			padding-left:8px;
+	 }
+ #uname_msg{
+    top:147px;
+ }
+#phone_msg{
+   top:202px;
+}
+#upwd_msg{
+  top:312px;
+}
+#rewd_msg{
+  bottom:234px;
+}

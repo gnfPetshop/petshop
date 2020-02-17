@@ -1,0 +1,124 @@
+/*登录底色样式设为黑色*/
+.main1 .nav ul li:last-child {
+    background: #000;
+}
+
+/*中间主模块位置*/
+.main_module{
+    width: 80%;
+    font-size:14px;
+    margin:0 auto;
+    display:flex !important;
+    justify-content: space-around;
+    padding:5%;
+}
+
+.left_pic img{
+    width:100%;
+}
+/*登录模块*/
+.right_login{
+    max-width:420px;
+    min-width:300px;
+    background:#f7f7f7;
+    box-shadow: 0 0 20px #ddd;
+    border-radius: 5px;
+    box-sizing:border-box;
+}
+/*去除lable和p的样式*/
+label,p{
+    margin-bottom: 0;
+    color:#666;
+    font-size:12px;
+}
+/*右侧登录模块 边框到内容的距离*/
+.right_login>div{
+    padding:50px;
+	position:relative;
+}
+/*每个li的间距*/
+.right_login ul li{
+    height:55px;
+}
+/*用户名和密码样式*/
+.uname,.upwd{
+    width:100%;
+    padding:5px 8px;
+    border-radius:3px;
+    outline: none;
+    border:1px solid #ddd;
+}
+/*当光标点击到input中的边框样式*/
+.uname:focus, .upwd:focus{
+    border:1px solid #666;
+}
+/*单独对第三个li 复选框所在的高度*/
+.right_login ul li:nth-child(3){
+    height:40px;
+}
+/*线条样式*/
+.right_login ul li:nth-child(4){
+     height:20px;
+     border-top:1px solid #ddd;
+}
+/*登录、注册按钮样式*/
+.right_login ul li button{
+    height:35px;
+    border:none ;
+    color:#fff;
+    background:#ff9003;
+    cursor:pointer;
+    outline:none;
+    border-radius:3px;
+}
+/*登录按钮样式*/
+.right_login ul li:nth-child(6) button{
+    color:#ff9003;
+    background:#fff;
+    border:1px solid #ff9003;
+}
+/*忘记密码样式*/
+.right_login ul li:last-child{
+    text-align:right;
+}
+/*忘记密码字体样式*/
+.right_login ul li:last-child a{
+    color:#333;
+}
+/*去掉下划线*/
+.right_login ul li:last-child a:hover{
+    text-decoration: none;
+    color:#E25041;
+}
+/*底层文字的下外边距*/
+.right_login>div>div:last-child p{
+    margin-bottom:8px;
+}
+/*第一行文字的样式*/
+.right_login>div>div:last-child p:first-child{
+    font-size:14px;
+    color:#000;
+}
+/*第二行文字的样式*/
+.right_login>div>div:last-child p:nth-child(2) span{
+    color:#000;
+}
+/*第三行文字的样式*/
+.right_login>div>div:last-child p:nth-child(3) span{
+    color:#E25041;
+}
+/*验证框样式*/
+ #phone_msg,#upwd_msg{
+	    position:absolute;
+			width:290px;
+			height:23px;
+			color:#666;
+			padding-left:8px;
+}
+/*验证框绝对定位*/
+#phone_msg{
+  top:147px;
+}
+#upwd_msg{
+  top:201px;
+}

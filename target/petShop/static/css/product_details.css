@@ -1,0 +1,302 @@
+*{
+    margin:0;
+    padding:0;
+}
+.container-fluid{
+    height:2200px;
+}
+a:hover{text-decoration:none;}
+/*面包屑导航样式重写*/
+.breadcrumb{
+    width:63%;
+    font-size:13px;
+    color:#595959;
+    background-color:transparent;
+    border-bottom:1px solid #ddd;
+    border-radius:0;
+}
+.breadcrumb li a img{
+   width:18px;
+    margin:0 6px 4px 0;
+}
+
+/*重写面包屑导航中间的图标*/
+.breadcrumb-item + .breadcrumb-item::before {
+    content: ">";
+}
+/*面包屑导航前单个连接的文本样式*/
+.breadcrumb-item a{
+    color:#595959;
+}
+/*当鼠标悬停时去除a标签的下划线*/
+.breadcrumb-item a{
+    text-decoration:none;
+}
+/*主体内容位置*/
+.main{
+  width:63%;
+  margin:50px auto;
+  display:flex;
+  justify-content:space-between;
+}
+/*左边产品详情宽度*/
+.left_pro{
+  width:70%;
+    min-width:650px;
+  height:500px;
+  display:flex;
+  border-right:1px solid #ddd;
+}
+/*右边产品推荐宽度*/
+.right_intr{
+  margin-right:-44px;
+    min-width:230px;
+  width:30%;
+}
+
+/*相关推荐背景颜色*/
+.right_intr .style1{
+    width:85%;
+    height:50px;
+    line-height:50px;
+    background:#000;
+    border-radius:25px;
+}
+/*相关推荐图片大小*/
+.right_intr .style1 img{
+    width:16px;
+    margin-left:20px;
+    margin-bottom:10px;
+}
+/*相关推荐文字样式*/
+.right_intr .style1 span{
+    color:#fff;
+    font-size:15px;
+    font-weight:bold;
+    margin-left:15px;
+}
+
+/*宽度*/
+.right_intr>div:first-child>ul>li{
+    width:75%;
+    height:40px;
+    line-height:40px;
+}
+/*文字样式*/
+.right_intr>div:first-child>ul>li a{
+    font-size:13px;
+    color:#666;
+    margin-left:10px;
+}
+/*文字样式*/
+.right_intr>div:first-child>ul>li a:hover{
+    text-decoration:none;
+    color:#ff9003;
+}
+/*中间下划线*/
+.right_intr>div>ul>li:first-child{
+    border-bottom:1px solid #eee;
+}
+/*推荐产品中的详情介绍*/
+.pro_intr .details{
+    /*width:50%;*/
+    padding-right:50px;
+}
+/*产品描述文字样式*/
+.pro_intr .details>a{
+    display: block;
+    font-size:12px;
+    color:#999;
+}
+/*鼠标悬停时的文字样式*/
+.pro_intr .details>a:hover{
+    text-decoration: none;
+    color:#333;
+}
+/*价格样式*/
+.pro_intr .details>div{
+    font-size:22px;
+    color:#ff9003;
+    margin-bottom:5px;
+}
+/*立即购买样式*/
+.pro_intr .details>button{
+    font-size: 12px;
+    font-weight: bold;
+    color: #333333;
+    border-color: transparent;
+    background-color: transparent;
+    padding-left: 1px;
+    padding-right: 1px;
+}
+/*立即购买，鼠标悬停时的样式*/
+.pro_intr .details>button:hover{
+    color:#999;
+}
+
+/*左侧图片*/
+.left_pic{
+	margin-right:30px;
+}
+/*小图片*/
+.pic_sm{
+    width:60%;
+    margin:15px 0 40px 0;
+}
+/*小图片间距离*/
+.pic_sm ul li{
+    margin-right:15px;
+}
+/*标题下的下划线*/
+.my_line{
+    width:15%;
+    border:2px solid #ddd;
+}
+/*购买详情标题文字样式*/
+.left_intr>div>p:first-child{
+    font-size:20px
+}
+/*购买详情规则文字样式*/
+.left_intr>div>p:nth-child(3){
+    font-size:13px;
+    color:#999;
+    margin-top:20px;
+}
+
+/*购买详情价格样式*/
+.left_intr>div>p:nth-child(4){
+    font-size:22px;
+    color:#FF9003;
+}
+/*口味绿茶味和蜜桃味样式*/
+.left_intr>div>p:nth-child(5) a{
+     display:inline-block;
+     font-size:12px;
+     padding:4px 12px;
+}
+/*绿茶味默认样式 */
+.left_intr>div>p:nth-child(5) a:first-child{
+    margin-left:15px;
+    margin-right:6px;
+}
+/*蜜桃味的默认样式*/
+.unck_color{
+  color:#666;
+  border:1px solid #ccc;
+}
+/*鼠标悬停时的样式*/
+.left_intr>div>p:nth-child(5) a:hover,.ck_color{
+    background:#FF9003;
+    border:1px solid #FF9003;
+    color:#fff;
+}
+/*立即购买样式*/
+.left_intr>div>div:nth-child(6) a{
+    width:138px;
+    height:45px;
+    text-align:center;
+    line-height:45px;
+    margin-right:15px;
+    color:#fff;
+    font-size:14px;
+    background:#000;
+}
+/*按钮样式*/
+.left_intr button{
+    width:45px;
+    height:45px;
+    background:none;
+    border:1px solid #ccc;
+    overflow:visible !important;
+}
+/*中间输入框计算数量样式*/
+.left_intr input{
+    text-align:center;
+    width:45px;
+    height:45px;
+    outline:none;
+    border:1px solid #999;
+
+}
+/*商品编号样式*/
+.left_intr>div>p:nth-child(7){
+    color:#aaa;
+    padding:5px 0;
+    margin-top:20px;
+    font-size:12px;
+    border-top:1px dotted #999;
+    border-bottom:1px dotted #ddd;
+}
+/*分类样式*/
+.left_intr>div>p:nth-child(8){
+    font-size:12px;
+}
+/*分类中a标签文字样式*/
+.left_intr>div>p:nth-child(8) a{
+    color:#ccc;
+}
+.left_intr>div>a:last-child{
+    display:block;
+    color:#666;
+    font-size:14px;
+}
+.left_intr>div>a:last-child img{
+    margin-right:5px;
+    width:15px
+}
+/*大屏幕显示，中小屏隐藏*/
+@media screen and (max-width:992px){
+    .main{
+        display:none;
+    }
+    .breadcrumb {
+        width:100%;
+        padding-top:70px;
+    }
+    .breadcrumb-item:first-child{
+        margin-left:40px;
+    }
+    /*小屏footer的固定距离 */
+    .container-fluid{
+        width:100%;
+        height:100%;
+    }
+}
+/*详情信息和客户评价*/
+.xq,.xq_sd{
+    height:50px;
+    margin:0 auto;
+    line-height:50px;
+    border-radius:35px;
+    background:#f5f5f5;
+}
+/*详情信息和客户评价字体样式*/
+.xq a,.xq_sd a{
+     font-size:14px;
+     display:inline-block;
+     padding:0 40px;
+    color:#666;
+}
+/*详情信息和客户评价鼠标悬停时字体样式*/
+.xq a:hover,.xq_sd a:hover{
+    font-weight:bold;
+    color:#000;
+}
+/*客户评价样式*/
+#evaluate,.yh_pj{
+    color:#666;
+    font-size:13px;
+    border-top:3px solid #eee;
+    margin-top: 10px;
+    padding-top:10px;
+}
+/*调整详情信息和客户评价到内容间的距离*/
+#evaluate,#det_content,
+.xq_xx,.yh_pj{
+    width:100%;
+    margin-top:40px;
+}
+.hide{
+    display:none;
+}
+

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "http://mybatis.org/dtd/mybatis-3-mapper.dtd" "mybatis-3-mapper.dtd" >
+<mapper namespace="com.kgc.exam.mapper.AddressMapper">
+
+    <select id="queryAddress" resultType="com.kgc.exam.entity.Address">
+        select id,userid,address,ordername,tel,used from addresses
+        <where>
+            userid=#{userid}
+        </where>
+    </select>
+    <select id="query" resultType="com.kgc.exam.entity.Address">
+        select id,userid,address,ordername,tel,used from addresses
+        <where>
+            id=#{id}
+        </where>
+    </select>
+    <update id="update">
+        update addresses
+        <set>
+            used =0
+        </set>
+        <where>
+            userid=#{userid}
+        </where>
+    </update>
+    <update id="updateAddress">
+        update addresses
+        <set>
+            used=1
+        </set>
+        <where>
+            id=#{id}
+        </where>
+    </update>
+    <delete id="del">
+        delete from addresses
+        <where>
+            id=#{id}
+        </where>
+    </delete>
+    <insert id="add">
+        insert into addresses(id,userid,address,ordername,tel,used) values(#{address.id},#{address.userid},#{address.address},#{address.ordername},#{address.tel},#{address.used})
+    </insert>
+</mapper>
