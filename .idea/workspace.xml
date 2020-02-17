@@ -6,7 +6,10 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aaf244d3-2471-4f1e-b1a3-abe432c9d87d" name="Default Changelist" comment="" />
+    <list default="true" id="aaf244d3-2471-4f1e-b1a3-abe432c9d87d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -196,7 +199,7 @@
       <workItem from="1580450468563" duration="1323000" />
       <workItem from="1580517947118" duration="2006000" />
       <workItem from="1581039773916" duration="459000" />
-      <workItem from="1581927083127" duration="1216000" />
+      <workItem from="1581927083127" duration="2694000" />
     </task>
     <task id="LOCAL-00001" summary="测试">
       <created>1581928315910</created>
@@ -205,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581928315910</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="测试">
+      <created>1581928448108</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1581928448108</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,18 +226,18 @@
     <option name="LAST_COMMIT_MESSAGE" value="测试" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="372" y="3" key="CommitChangelistDialog2" timestamp="1581928314076">
+    <state x="372" y="3" key="CommitChangelistDialog2" timestamp="1581928446729">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="372" y="3" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1581928314076" />
+    <state x="372" y="3" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1581928446729" />
     <state x="147" y="71" key="DiffContextDialog" timestamp="1581928266874">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="147" y="71" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1581928266874" />
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1581927712365">
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1581930322576">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1581927712365" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1581930322576" />
     <state x="471" y="204" key="git4idea.merge.GitPullDialog" timestamp="1581927633802">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
