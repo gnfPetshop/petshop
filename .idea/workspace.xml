@@ -192,7 +192,7 @@
       <workItem from="1580450468563" duration="1323000" />
       <workItem from="1580517947118" duration="2006000" />
       <workItem from="1581039773916" duration="459000" />
-      <workItem from="1581927083127" duration="1216000" />
+      <workItem from="1581927083127" duration="2943000" />
     </task>
     <task id="LOCAL-00001" summary="测试">
       <created>1581928315910</created>
@@ -201,7 +201,28 @@
       <option name="project" value="LOCAL" />
       <updated>1581928315910</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="测试">
+      <created>1581928448108</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1581928448108</updated>
+    </task>
+    <task id="LOCAL-00003" summary="测试2">
+      <created>1581930387764</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1581930387764</updated>
+    </task>
+    <task id="LOCAL-00004" summary="测试3">
+      <created>1581930525401</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1581930525401</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,21 +230,23 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="测试" />
-    <option name="LAST_COMMIT_MESSAGE" value="测试" />
+    <MESSAGE value="测试2" />
+    <MESSAGE value="测试3" />
+    <option name="LAST_COMMIT_MESSAGE" value="测试3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="372" y="3" key="CommitChangelistDialog2" timestamp="1581928314076">
+    <state x="372" y="3" key="CommitChangelistDialog2" timestamp="1581930543858">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="372" y="3" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1581928314076" />
+    <state x="372" y="3" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1581930543858" />
     <state x="147" y="71" key="DiffContextDialog" timestamp="1581928266874">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="147" y="71" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1581928266874" />
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1581927712365">
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1581930596683">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1581927712365" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1581930596683" />
     <state x="471" y="204" key="git4idea.merge.GitPullDialog" timestamp="1581927633802">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
