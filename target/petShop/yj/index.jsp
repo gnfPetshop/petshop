@@ -14,14 +14,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=0">
 
     <title>个人中心</title>
+    <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+    <script>
+        function setIframeHeight(iframe) {
+            if (iframe) {
+                var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
+                if (iframeWin.document.body) {
+                    iframe.height = iframeWin.document.documentElement.scrollHeight || iframeWin.document.body.scrollHeight;
+                    var height=iframeWin.document.documentElement.scrollHeight || iframeWin.document.body.scrollHeight;
+                    $(iframe).css('height',(height+50));
 
+                }
+            }
+        };
+    </script>
     <link href="../AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
     <link href="https://cdn.bootcss.com/amazeui/2.5.1/css/amazeui.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../css/personal.css" >
     <link href="../css/systyle.css" rel="stylesheet" type="text/css">
     <link href="../css/infstyle.css" rel="stylesheet" type="text/css">
     <link type="text/css" rel="stylesheet" href="../css/bootstrap.css"/>
-    <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+
     <script type="text/javascript" src="../js/popper.min.js"></script>
     <script type="text/javascript" src="../js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../css/comm.css" type="text/css">
@@ -77,7 +90,7 @@
         <div class="col-main">
             <div class="main-wrap">
                 <div class="wrap-left">
-                        <iframe  name="my-iframe" id="my-iframe" width="100%" height="1000px"scrolling="No" frameborder="0">
+                        <iframe  name="my-iframe" id="my-iframe" width="100%" height="1000px"scrolling="No" frameborder="0" onload="setIframeHeight(this)">
 
                     </iframe>
                 </div>
