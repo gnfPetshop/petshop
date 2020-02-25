@@ -18,9 +18,9 @@ public class UsersController {
     private UsersService usersService;
 
     @RequestMapping("queryUsers")
-    public Users queryUsers(){
+    public Users queryUsers(@RequestParam("id") Integer id){
 
-        Users users = usersService.queryUsers();
+        Users users = usersService.queryUsers(id);
         return users;
     }
     @RequestMapping("updateUsers")

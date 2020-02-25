@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "http://mybatis.org/dtd/mybatis-3-mapper.dtd" "mybatis-3-mapper.dtd" >
+<mapper namespace="com.kgc.exam.mapper.OrdersMapper">
+
+    <resultMap id="OrdersMap" type="com.kgc.exam.entity.Orders">
+        <id column="id" property="id"/>
+        <result property="ordersid" column="ordersid"/>
+        <result property="userid" column="userid"/>
+        <result property="goodsid" column="goodsid"/>
+        <result property="starttime" column="starttime"/>
+        <result property="paytime" column="paytime"/>
+        <result property="singleprice" column="singleprice"/>
+        <result property="totalprice" column="totalprice"/>
+        <result property="amount" column="amount"/>
+        <result property="state" column="state"/>
+        <result property="addressid" column="addressid"/>
+        <result property="tel" column="tel"/>
+        <result property="wuliu" column="wuliu"/>
+        <result property="comment" column="comment"/>
+        <association property="goods" javaType="com.kgc.exam.entity.Goods">
+            <id column="gid" property="id"/>
+            <result property="goodsname" column="goodsname"/>
+            <result property="goodspicture1" column="goodspicture1"/>
+        </association>
+    </resultMap>
+
+    <select id="queryByUserId" resultMap="OrdersMap">
+        select o.id,o.ordersid,o.userid,o.goodsid,o.starttime,o.paytime,o.singleprice,o.totalprice,o.amount,o.state,o.addressid,o.tel,
+        o.wuliu,g.id gid,g.goodsname,g.goodspicture1 from orders o inner join goods g on o.goodsid=g.id
+        <where>
+            userid=#{userid}
+        </where>
+            order by o.starttime
+    </select>
+
+    <delete id="delOrders">
+        delete from orders where ordersid=#{ordersid}
+    </delete>
+
+    <select id="queryByUserIdAndState" resultMap="OrdersMap">
+        select o.id,o.ordersid,o.userid,o.goodsid,o.starttime,o.paytime,o.singleprice,o.totalprice,o.amount,o.state,o.addressid,o.tel,
+        o.wuliu,g.id gid,g.goodsname,g.goodspicture1 from orders o inner join goods g on o.goodsid=g.id
+        <where>
+            userid=#{userid} and o.state=0
+        </where>
+        order by o.starttime
+    </select>
+
+    <select id="queryByUserIdAndFahuo" resultMap="OrdersMap">
+        select o.id,o.ordersid,o.userid,o.goodsid,o.starttime,o.paytime,o.singleprice,o.totalprice,o.amount,o.state,o.addressid,o.tel,
+        o.wuliu,g.id gid,g.goodsname,g.goodspicture1 from orders o inner join goods g on o.goodsid=g.id
+        <where>
+            userid=#{userid} and o.state=1 and o.wuliu=0
+        </where>
+        order by o.starttime
+    </select>
+
+
+    <select id="queryByUserIdAndShouhuo" resultMap="OrdersMap">
+        select o.id,o.ordersid,o.userid,o.goodsid,o.starttime,o.paytime,o.singleprice,o.totalprice,o.amount,o.state,o.addressid,o.tel,
+        o.wuliu,g.id gid,g.goodsname,g.goodspicture1 from orders o inner join goods g on o.goodsid=g.id
+        <where>
+            userid=#{userid} and o.state=1 and o.wuliu=1
+        </where>
+        order by o.starttime
+    </select>
+
+
+    <select id="queryByUserIdAndComment" resultMap="OrdersMap">
+        select o.id,o.ordersid,o.userid,o.goodsid,o.starttime,o.paytime,o.singleprice,o.totalprice,o.amount,o.state,o.addressid,o.tel,
+        o.wuliu,o.comment,g.id gid,g.goodsname,g.goodspicture1 from orders o inner join goods g on o.goodsid=g.id
+        <where>
+            userid=#{userid} and o.state=1 and o.wuliu=2 and o.comment =0
+        </where>
+        order by o.starttime
+    </select>
+
+    <select id="queryByUserIdAndTiJiaoComment" resultMap="OrdersMap">
+        select o.id,o.ordersid,o.userid,o.goodsid,o.starttime,o.paytime,o.singleprice,o.totalprice,o.amount,o.state,o.addressid,o.tel,
+        o.wuliu,g.id gid,g.goodsname,g.goodspicture1 from orders o inner join goods g on o.goodsid=g.id
+        <where>
+            userid=#{userid} and ordersid=#{ordersid}
+        </where>
+    </select>
+
+    <insert id="addComment">
+        insert into comment(userid,goodsid,content,ordersid)
+        values(#{userid},#{goodsid},#{content},#{ordersid})
+    </insert>
+<update id="updateOrdersComment">
+    update orders
+    <set>
+        comment=1
+    </set>
+    <where>
+        ordersid=#{ordersid} and goodsid=#{goodsid}
+    </where>
+</update>
+
+</mapper>

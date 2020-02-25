@@ -11,8 +11,8 @@ public class UsersServiceImpl implements UsersService {
     @Autowired
     private UsersMapper usersMapper;
     @Override
-    public Users queryUsers() {
-        return usersMapper.queryUsers();
+    public Users queryUsers(Integer id) {
+        return usersMapper.queryUsers(id);
     }
 
     @Override

@@ -5,6 +5,9 @@
     <select id="queryUsers" resultType="com.kgc.exam.entity.Users">
         select id,account,password,username,sex,tel,email,address
         from users
+        <where>
+            id=#{id}
+        </where>
     </select>
 
     <update id="updateUsers">

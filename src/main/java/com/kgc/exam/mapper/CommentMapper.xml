@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "http://mybatis.org/dtd/mybatis-3-mapper.dtd" "mybatis-3-mapper.dtd" >
+<mapper namespace="com.kgc.exam.mapper.CommentMapper">
+    <resultMap id="commentmap" type="com.kgc.exam.entity.Comment">
+        <id property="id" column="cid"/>
+        <result column="userid" property="userid"/>
+        <result column="ordersid" property="ordersid"/>
+        <result column="goodsid" property="goodsid"/>
+        <result column="content" property="content"/>
+        <result column="commentdate" property="commentdate"/>
+        <association property="goods" javaType="com.kgc.exam.entity.Goods">
+            <id column="gid" property="id"/>
+            <result property="goodsname" column="goodsname"/>
+            <result property="goodspicture1" column="goodspicture1"/>
+        </association>
+    </resultMap>
+
+
+    <select id="queryCommentsByUseridAndComment" resultMap="commentmap">
+        select c.id cid,c.userid,c.ordersid,c.goodsid,c.content,c.commentdate,g.id gid,g.goodsname,g.goodspicture1
+        from comment c inner join goods g on c.goodsid=g.id
+        where userid=#{userid}
+    </select>
+
+    <resultMap id="collectionmap" type="com.kgc.exam.entity.Collection">
+        <id property="id" column="id"/>
+        <result column="userid" property="userid"/>
+        <result column="goodsid" property="goodsid"/>
+        <association property="goods" javaType="com.kgc.exam.entity.Goods">
+            <id column="gid" property="id"/>
+            <result property="goodsname" column="goodsname"/>
+            <result property="goodspicture1" column="goodspicture1"/>
+            <result property="sales" column="sales"/>
+            <result property="price" column="price"/>
+        </association>
+    </resultMap>
+
+    <select id="queryCollections" resultMap="collectionmap">
+        select c.id,c.userid,c.goodsid,g.id gid,g.goodsname,g.goodspicture1,g.sales,g.price from collections c inner join
+        goods g on c.goodsid=g.id
+        <where>
+            c.userid=#{userid}
+        </where>
+    </select>
+
+    <delete id="delCollections">
+        delete from collections
+        <where>
+            userid=#{userid} and goodsid=#{goodsid}
+        </where>
+    </delete>
+</mapper>

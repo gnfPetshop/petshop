@@ -29,6 +29,84 @@
     <link type="text/css" rel="stylesheet" href="../css/comm.css">
     <!--   <link rel="stylesheet" href="css/login.css"> -->
     <link type="text/css" rel="stylesheet" href="../css/header.css">
+    <style type="text/css">
+        .goodspicture1{
+            width: 148px;
+            height: 148px;
+        }
+    </style>
+    <script type="text/javascript">
+        var userid=getUrlParam("userid");
+        var ordersid=getUrlParam("ordersid");
+        $(function () {
+            $.getJSON("../orders/queryByUserIdAndTiJiaoComment",{"userid":userid,"ordersid":ordersid},function (data) {
+                    var str ="";
+                    for (var i=0;i<data.length;i++){
+                        str +="<div class='total'>"+
+                            "<div class=\"comment-list\">"+
+                            "<div class=\"item-pic\">\n" +
+                            "<a href=\"#\" class=\"J_MakePoint\">\n" +
+                            "<img src=\"../upload/"+data[i].goods.goodspicture1+"\" class=\"itempic goodspicture1\">\n" +
+                            "</a>\n" +
+                            "</div>\n" +
+                            "<div class=\"item-title\">\n" +
+                            "<div class=\"item-name\">\n" +
+                            "<a href=\"#\">\n" +
+                            "<p class=\"item-basic-info\">"+data[i].goods.goodsname+"</p>\n" +
+                            "</a>\n" +
+                            "</div>\n" +
+                            "<div class=\"item-info\">\n" +
+                            "<div class=\"item-price\">\n" +
+                            "价格：<strong>"+data[i].totalprice+"元</strong>\n" +
+                            "</div>\n" +
+                            "</div>\n" +
+                            "</div>\n" +
+                            "<div class=\"clear\"></div>\n" +
+                            "<div class=\"item-comment\">\n" +
+                            "<textarea class='content' placeholder=\"请写下对宝贝的感受吧，对他人帮助很大哦！\"></textarea>\n" +
+                            "</div>\n" +
+                            /*"<div class=\"item-opinion\">\n" +
+                            "<li><i class=\"op1\"></i>好评</li>\n" +
+                            "<li><i class=\"op2\"></i>中评</li>\n" +
+                            "<li><i class=\"op3\"></i>差评</li>\n" +
+                            "</div>\n" +
+                            "</div>"+*/
+                            "<div class=\"info-btn\">\n" +
+                            "<div class=\"am-btn am-btn-danger \" onclick='fabu("+data[i].goodsid+",this)'>发表评论</div>\n" +
+                            "</div>"+
+                            "</div>"+
+                            "</div>"
+
+                    }
+                $(".comment-main").empty().append(str);
+
+            })
+
+
+        })
+        //获取地址栏参数,可以是中文参数
+        function getUrlParam(key) {
+            // 获取参数
+            var url = window.location.search;
+            // 正则筛选地址栏
+            var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)");
+            // 匹配目标参数
+            var result = url.substr(1).match(reg);
+            //返回参数值
+            return result ? decodeURIComponent(result[2]) : null;
+        }
+
+        function fabu(goodsid,obj) {
+
+                var content = $(obj).parents(".total").find(".content").val();
+                $.getJSON("../orders/addComment",{"userid":userid,"ordersid":ordersid,"goodsid":goodsid,"content":content},function (data) {
+                    if (data){
+                        alert("评价成功");
+                        $(obj).parents(".total").remove();
+                    }
+                })
+        }
+    </script>
 </head>
 
 <body>
@@ -49,8 +127,8 @@
                     <hr/>
 
                     <div class="comment-main">
-                        <div class="comment-list">
-                            <div class="item-pic">
+
+                        <%--    <div class="item-pic">
                                 <a href="#" class="J_MakePoint">
                                     <img src="../images/comment.jpg_400x400.jpg" class="itempic">
                                 </a>
@@ -77,115 +155,23 @@
                             <div class="item-comment">
                                 <textarea placeholder="请写下对宝贝的感受吧，对他人帮助很大哦！"></textarea>
                             </div>
-                            <div class="filePic">
-                                <input type="file" class="inputPic" allowexts="gif,jpeg,jpg,png,bmp" accept="image/*" >
-                                <span>晒照片(0/5)</span>
-                                <img src="../images/image.jpg" alt="">
-                            </div>
+
                             <div class="item-opinion">
                                 <li><i class="op1"></i>好评</li>
                                 <li><i class="op2"></i>中评</li>
                                 <li><i class="op3"></i>差评</li>
                             </div>
-                        </div>
+                        </div>--%>
 
-                        <!--多个商品评论-->
-                        <div class="comment-list">
-                            <div class="item-pic">
-                                <a href="#" class="J_MakePoint">
-                                    <img src="../images/comment.jpg_400x400.jpg" class="itempic">
-                                </a>
-                            </div>
 
-                            <div class="item-title">
-
-                                <div class="item-name">
-                                    <a href="#">
-                                        <p class="item-basic-info">美康粉黛醉美唇膏 持久保湿滋润防水不掉色</p>
-                                    </a>
-                                </div>
-                                <div class="item-info">
-                                    <div class="info-little">
-                                        <span>颜色：洛阳牡丹</span>
-                                        <span>包装：裸装</span>
-                                    </div>
-                                    <div class="item-price">
-                                        价格：<strong>19.88元</strong>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="clear"></div>
-                            <div class="item-comment">
-                                <textarea placeholder="请写下对宝贝的感受吧，对他人帮助很大哦！"></textarea>
-                            </div>
-                            <div class="filePic">
-                                <input type="file" class="inputPic" allowexts="gif,jpeg,jpg,png,bmp" accept="image/*" >
-                                <span>晒照片(0/5)</span>
-                                <img src="../images/image.jpg" alt="">
-                            </div>
-                            <div class="item-opinion">
-                                <li><i class="op1"></i>好评</li>
-                                <li><i class="op2"></i>中评</li>
-                                <li><i class="op3"></i>差评</li>
-                            </div>
-                        </div>
-
-                        <div class="comment-list">
-                            <div class="item-pic">
-                                <a href="#" class="J_MakePoint">
-                                    <img src="../images/comment.jpg_400x400.jpg" class="itempic">
-                                </a>
-                            </div>
-
-                            <div class="item-title">
-
-                                <div class="item-name">
-                                    <a href="#">
-                                        <p class="item-basic-info">美康粉黛醉美唇膏 持久保湿滋润防水不掉色</p>
-                                    </a>
-                                </div>
-                                <div class="item-info">
-                                    <div class="info-little">
-                                        <span>颜色：洛阳牡丹</span>
-                                        <span>包装：裸装</span>
-                                    </div>
-                                    <div class="item-price">
-                                        价格：<strong>19.88元</strong>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="clear"></div>
-                            <div class="item-comment">
-                                <textarea placeholder="请写下对宝贝的感受吧，对他人帮助很大哦！"></textarea>
-                            </div>
-                            <div class="filePic">
-                                <input type="file" class="inputPic" allowexts="gif,jpeg,jpg,png,bmp" accept="image/*" >
-                                <span>晒照片(0/5)</span>
-                                <img src="../images/image.jpg" alt="">
-                            </div>
-                            <div class="item-opinion">
-                                <li><i class="op1"></i>好评</li>
-                                <li><i class="op2"></i>中评</li>
-                                <li><i class="op3"></i>差评</li>
-                            </div>
-                        </div>
-                        <div class="info-btn">
+                       <%-- <div class="info-btn">
                             <div class="am-btn am-btn-danger">发表评论</div>
-                        </div>
-                        <script type="text/javascript">
-                            $(document).ready(function() {
-                                $(".comment-list .item-opinion li").click(function() {
-                                    $(this).prevAll().children('i').removeClass("active");
-                                    $(this).nextAll().children('i').removeClass("active");
-                                    $(this).children('i').addClass("active");
-
-                                });
-                            })
-                        </script>
+                        </div>--%>
 
 
 
-                    </div>
+
+
 
                 </div>
 
@@ -197,6 +183,16 @@
 
     </div>
 </div>
+</div>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".comment-list .item-opinion li").click(function() {
+                $(this).prevAll().children('i').removeClass("active");
+                $(this).nextAll().children('i').removeClass("active");
+                $(this).children('i').addClass("active");
+            });
+        })
+    </script>
 </body>
 
 </html>

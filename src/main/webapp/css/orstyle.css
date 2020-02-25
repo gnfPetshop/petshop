@@ -161,7 +161,10 @@ ul.td-changeorder {width:20%}
 .inquire{display: block;position: absolute;bottom:50px;}
 .order-logistics span.icon {display: none;}
 }
-
+.goodsname{
+    margin-top: 30px;
+    margin-left: 16px;
+}
 
 
 

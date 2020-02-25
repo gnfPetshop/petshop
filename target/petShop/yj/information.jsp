@@ -41,21 +41,21 @@
 
     <script type="text/javascript">
 
-        var id=0;
+        var id=1;
 
         $(function () {
-            $.getJSON("../users/queryUsers",function (data) {
+            $.getJSON("../users/queryUsers",{"id":id},function (data) {
                 id = data.id;
                 $(".yhm").html(data.username);
                 $("#username").val(data.username);
                 $("#account").val(data.account);
 
-                if (data.sex==0){
-                    $("input[name='sex'][value=0]").attr("checked",true);
-                } else if (data.sex==1) {
-                    $("input[name='sex'][value=1]").attr("checked",true);
+                if (data.sex==1){
+                    $(".boy").prop("checked",'checked');
+                } else if (data.sex==0) {
+                    $(".girl").prop("checked",'checked');
                 }else{
-                    $("input[name='sex'][value=2]").attr("checked",true);
+                    $(".secret").prop("checked",'checked');
                 }
 
                 var arr = data.address.split("/");
@@ -69,7 +69,7 @@
             $(".saveupdate").click(function () {
                 var account = $("#account").val();
                 var username = $("#username").val();
-                var sex = $("input[name='sex'][checked]").val();
+                var sex = $("input[name=sex]:checked").val();
                 var tel = $("#user-phone").val();
                 var email = $("#user-email").val();
                 var address = $(".sheng").val()+"/"+$(".shi").val()+"/"+$(".xian").val();
@@ -89,13 +89,6 @@
 <body>
 <!--头 -->
 <div class="container-fluid px-0">
-
-    <!--顶部登录条top_bar-->
-    <!--大屏时显示-->
-
-    <!--header内容-->
-    <!--第一模块大屏幕显示-->
-
 
 
     <div class="center">
@@ -159,13 +152,13 @@
                                 <label class="am-form-label">性别</label>
                                 <div class="am-form-content sex">
                                     <label class="am-radio-inline">
-                                        <input type="radio" name="sex" value="1" data-am-ucheck> 男
+                                        <input type="radio" class="boy" name="sex" value="1" data-am-ucheck> 男
                                     </label>
                                     <label class="am-radio-inline">
-                                        <input type="radio" name="sex" value="0" data-am-ucheck> 女
+                                        <input type="radio" class="girl" name="sex" value="0" data-am-ucheck> 女
                                     </label>
                                     <label class="am-radio-inline">
-                                        <input type="radio" name="sex" value="2" data-am-ucheck> 保密
+                                        <input type="radio" class="secret" name="sex" value="2" data-am-ucheck> 保密
                                     </label>
                                 </div>
                             </div>

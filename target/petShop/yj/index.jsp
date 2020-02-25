@@ -143,14 +143,14 @@
 
                     </ul>
                 </li>
-                <li class="person">
+                <%--<li class="person">
                     <a href="#">我的资产</a>
                     <ul>
                         <li> <a href="coupon.jsp"   target="my-iframe">优惠券 </a></li>
                         <li> <a href="bonus.jsp"   target="my-iframe">红包</a></li>
-                        <li> <a href="billlist.jsp" target="my-iframe">账单明细</a></li>
+                        &lt;%&ndash;<li> <a href="billlist.jsp" target="my-iframe">账单明细</a></li>&ndash;%&gt;
                     </ul>
-                </li>
+                </li>--%>
 
                 <li class="person">
                     <a href="#">我的小窝</a>

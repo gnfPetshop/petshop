@@ -5,7 +5,7 @@ import org.apache.ibatis.annotations.Param;
 
 public interface UsersMapper {
 
-     Users queryUsers();
+     Users queryUsers(@Param("id") Integer id);
      Integer updateUsers(@Param("users")Users users);
      //根据id查找用户
      Users queryById(@Param("id")Integer id);
